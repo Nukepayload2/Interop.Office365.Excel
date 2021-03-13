@@ -1,15 +1,46 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   
   <PropertyGroup>
-    <RootNamespace>Nukepayload2.Interop.Office365.ExcelVbe</RootNamespace>
-    <AssemblyName>Nukepayload2.Interop.Office365.ExcelVbe</AssemblyName>
+    <RootNamespace>Nukepayload2.Interop.Office365.Excel</RootNamespace>
+    <AssemblyName>Nukepayload2.Interop.Office365.Excel</AssemblyName>
     <TargetFramework>net45</TargetFramework>
     <Deterministic>true</Deterministic>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Version>16.0.13801.20266</Version>
+    <Description>Provides Office 365 Excel Interop assemblies.</Description>
+    <PackageReleaseNotes>Compatible Excel version: 2102 (Feb 2021)</PackageReleaseNotes>
+    <PackageTags>excel, interop, office365, com</PackageTags>
+    <RepositoryUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <Copyright>Copyright 2021 Nukepayload2</Copyright>
+    <Company>Nukepayload2</Company>
+    <Authors>Nukepayload2</Authors>
+    <Product>Interop.Office365.Excel</Product>
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="MSTest.TestFramework" Version="2.0.0"/>
-    <PackageReference Include="Nukepayload2.Interop.Office365.Excel" Version="16.0.13801.20266"/>
+    <PackageReference Include="MSTest.TestFramework" Version="2.0.0" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Core">
+      <HintPath>..\InteropAssembly\Microsoft.Office.Interop.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\InteropAssembly\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop">
+      <HintPath>..\InteropAssembly\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="$(OutputPath)\Microsoft.Office.Interop.Core.dll" Pack="true"
+          PackagePath="lib/net45" Visible="false" />
+    <None Include="$(OutputPath)\Microsoft.Office.Interop.Excel.dll" Pack="true"
+          PackagePath="lib/net45" Visible="false" />
+    <None Include="$(OutputPath)\Microsoft.Vbe.Interop.dll" Pack="true"
+          PackagePath="lib/net45" Visible="false" />
+  </ItemGroup>
 </Project>
