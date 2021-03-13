@@ -1,6 +1,9 @@
 Imports Microsoft.Office.Interop.Excel
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
+''' <summary>
+''' Starts a new Excel application and run macros.
+''' </summary>
 <TestClass>
 Public MustInherit Class ExcelNewAppUnitTestBase
     Inherits ExcelMacroTestBase

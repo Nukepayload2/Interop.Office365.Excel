@@ -2,6 +2,9 @@
 Imports Microsoft.Office.Interop.Excel
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
+''' <summary>
+''' Attaches to an active and visible Excel application then run macros.
+''' </summary>
 <TestClass>
 Public MustInherit Class ExcelRunningAppUnitTestBase
     Inherits ExcelMacroTestBase
