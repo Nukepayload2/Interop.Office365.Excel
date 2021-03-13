@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Nukepayload2.Interop.Office365.Excel</id>
+    <version>16.0.13801.20266</version>
+    <title>Nukepayload2.Interop.Office365.Excel</title>
+    <authors>Nukepayload2</authors>
+    <owners>Nukepayload2</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides Office 365 Excel Interop assemblies.
+Compatible Excel version: 2102 (Feb 2021)</description>
+    <summary>Office 365 Excel Interop</summary>
+    <releaseNotes>Initial release</releaseNotes>
+    <tags>excel, interop, office365, com</tags>
+  </metadata>
+  <files>
+    <file src="lib\net40\Microsoft.Office.Interop.Core.dll" target="lib\net40\Microsoft.Office.Interop.Core.dll" />
+    <file src="lib\net40\Microsoft.Office.Interop.Excel.dll" target="lib\net40\Microsoft.Office.Interop.Excel.dll" />
+    <file src="lib\net40\Microsoft.Vbe.Interop.dll" target="lib\net40\Microsoft.Vbe.Interop.dll" />
+  </files>
+</package>
