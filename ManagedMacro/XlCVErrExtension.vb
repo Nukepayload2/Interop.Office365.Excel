@@ -58,7 +58,7 @@ Public Module XlCVErrExtension
     ''' <returns>An <see cref="ErrorWrapper"/> which can be 
     ''' set to <see cref="Range.Value2"/> or <see cref="Range.Value(Object)"/>.</returns>
     Public Function CVErr(errCode As XlCVError) As ErrorWrapper
-        Return New ErrorWrapper(VErrMask And errCode)
+        Return New ErrorWrapper(VErrMask Or errCode)
     End Function
 
     ''' <summary>
