@@ -6,9 +6,9 @@
     <TargetFramework>net45</TargetFramework>
     <Deterministic>true</Deterministic>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>16.0.13801.20266</Version>
+    <Version>16.0.13901.20462</Version>
     <Description>Provides Office 365 Excel Interop assemblies.</Description>
-    <PackageReleaseNotes>Compatible Excel version: 2102 (Feb 2021)</PackageReleaseNotes>
+    <PackageReleaseNotes>Compatible Excel version: 2103 (March 2021)</PackageReleaseNotes>
     <PackageTags>excel, interop, office365, com</PackageTags>
     <RepositoryUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</PackageProjectUrl>
@@ -17,6 +17,7 @@
     <Company>Nukepayload2</Company>
     <Authors>Nukepayload2</Authors>
     <Product>Interop.Office365.Excel</Product>
+    <DocumentationFile>Nukepayload2.Interop.Office365.Excel.xml</DocumentationFile>
   </PropertyGroup>
   
   <ItemGroup>
@@ -36,11 +37,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="$(OutputPath)\Microsoft.Office.Interop.Core.dll" Pack="true"
-          PackagePath="lib/net45" Visible="false" />
-    <None Include="$(OutputPath)\Microsoft.Office.Interop.Excel.dll" Pack="true"
-          PackagePath="lib/net45" Visible="false" />
-    <None Include="$(OutputPath)\Microsoft.Vbe.Interop.dll" Pack="true"
-          PackagePath="lib/net45" Visible="false" />
+    <None Include="$(OutputPath)\Microsoft.Office.Interop.Core.dll" Pack="true" PackagePath="lib/net45" Visible="false" />
+    <None Include="$(OutputPath)\Microsoft.Office.Interop.Excel.dll" Pack="true" PackagePath="lib/net45" Visible="false" />
+    <None Include="$(OutputPath)\Microsoft.Vbe.Interop.dll" Pack="true" PackagePath="lib/net45" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="My Project\" />
   </ItemGroup>
 </Project>
