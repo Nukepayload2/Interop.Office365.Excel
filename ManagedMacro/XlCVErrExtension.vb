@@ -44,6 +44,8 @@ Public Module XlCVErrExtension
                 Return "#UNKNOWN!"
             Case XlCVError.xlErrValue
                 Return "#VALUE!"
+            Case XlCvError_Busy
+                Return "#BUSY!"
         End Select
         Throw New ArgumentException
     End Function
@@ -71,6 +73,17 @@ Public Module XlCVErrExtension
     ''' <returns>The converted <see cref="XlCVError"/> value.</returns>
     Public Function ErrorCodeToXlCVErr(errorCode As Integer) As XlCVError
         Return (Not VErrMask) And errorCode
+    End Function
+
+    Private Const XlCvError_Busy As XlCVError = 2051
+
+    ''' <summary>
+    ''' Determines whether the error code is <see langword="#BUSY!"/> .
+    ''' </summary>
+    ''' <param name="errorCode">The error code returned from <see cref="IRange.Value(Object)"/> or <see cref="IRange.Value2"/>. </param>
+    ''' <returns><see langword="True"/> if the error code is <see langword="#BUSY!"/> Otherwise, <see langword="False"/>. </returns>
+    Public Function ErrorCodeIsBusy(errorCode As Integer) As Boolean
+        Return ErrorCodeToXlCVErr(errorCode) = XlCvError_Busy
     End Function
 
 End Module

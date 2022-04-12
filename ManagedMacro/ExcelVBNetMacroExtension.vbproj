@@ -3,17 +3,20 @@
   <PropertyGroup>
     <RootNamespace>Nukepayload2.Interop.Office365.Excel</RootNamespace>
     <AssemblyName>Nukepayload2.Interop.Office365.Excel</AssemblyName>
-    <TargetFramework>net45</TargetFramework>
+    <TargetFramework>net462</TargetFramework>
     <Deterministic>true</Deterministic>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>16.0.13901.20462</Version>
+    <Version>16.0.15028.20160</Version>
     <Description>Provides Office 365 Excel Interop assemblies.</Description>
-    <PackageReleaseNotes>Compatible Excel version: 2103 (March 2021)</PackageReleaseNotes>
+    <PackageReleaseNotes>Target Excel version: 2203 (March 2022)
+Added new worksheet functions, such as ARRAYTOTEXT.
+Migrated to .NET Framework 4.6.2 for security reason.
+Added `#BUSY!`</PackageReleaseNotes>
     <PackageTags>excel, interop, office365, com</PackageTags>
     <RepositoryUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
-    <Copyright>Copyright 2021 Nukepayload2</Copyright>
+    <Copyright>Copyright 2022 Nukepayload2</Copyright>
     <Company>Nukepayload2</Company>
     <Authors>Nukepayload2</Authors>
     <Product>Interop.Office365.Excel</Product>
@@ -37,9 +40,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="$(OutputPath)\Microsoft.Office.Interop.Core.dll" Pack="true" PackagePath="lib/net45" Visible="false" />
-    <None Include="$(OutputPath)\Microsoft.Office.Interop.Excel.dll" Pack="true" PackagePath="lib/net45" Visible="false" />
-    <None Include="$(OutputPath)\Microsoft.Vbe.Interop.dll" Pack="true" PackagePath="lib/net45" Visible="false" />
+    <None Include="$(OutputPath)\Microsoft.Office.Interop.Core.dll" Pack="true" PackagePath="lib/$(TargetFramework)" Visible="false" />
+    <None Include="$(OutputPath)\Microsoft.Office.Interop.Excel.dll" Pack="true" PackagePath="lib/$(TargetFramework)" Visible="false" />
+    <None Include="$(OutputPath)\Microsoft.Vbe.Interop.dll" Pack="true" PackagePath="lib/$(TargetFramework)" Visible="false" />
   </ItemGroup>
 
   <ItemGroup>
