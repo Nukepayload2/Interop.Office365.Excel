@@ -1,4 +1,5 @@
-﻿Imports Microsoft.Office.Core
+﻿Imports System.Reflection
+Imports Microsoft.Office.Core
 Imports Microsoft.Office.Interop.Excel
 
 ''' <summary>
@@ -67,7 +68,7 @@ Public MustInherit Class ExcelMacroTestBase
     Protected ReadOnly Property Range(Cell1 As Object, Optional Cell2 As Object = Nothing) As Range
         Get
             If Cell2 Is Nothing Then
-                Cell2 = Type.Missing
+                Cell2 = Missing.Value
             End If
             Return Application.Range(Cell1, Cell2)
         End Get
@@ -214,37 +215,37 @@ Public MustInherit Class ExcelMacroTestBase
         Return Application.Evaluate(Name)
     End Function
     Protected Function Run(Optional Macro As Object = Nothing, Optional Arg1 As Object = Nothing, Optional Arg2 As Object = Nothing, Optional Arg3 As Object = Nothing, Optional Arg4 As Object = Nothing, Optional Arg5 As Object = Nothing, Optional Arg6 As Object = Nothing, Optional Arg7 As Object = Nothing, Optional Arg8 As Object = Nothing, Optional Arg9 As Object = Nothing, Optional Arg10 As Object = Nothing, Optional Arg11 As Object = Nothing, Optional Arg12 As Object = Nothing, Optional Arg13 As Object = Nothing, Optional Arg14 As Object = Nothing, Optional Arg15 As Object = Nothing, Optional Arg16 As Object = Nothing, Optional Arg17 As Object = Nothing, Optional Arg18 As Object = Nothing, Optional Arg19 As Object = Nothing, Optional Arg20 As Object = Nothing, Optional Arg21 As Object = Nothing, Optional Arg22 As Object = Nothing, Optional Arg23 As Object = Nothing, Optional Arg24 As Object = Nothing, Optional Arg25 As Object = Nothing, Optional Arg26 As Object = Nothing, Optional Arg27 As Object = Nothing, Optional Arg28 As Object = Nothing, Optional Arg29 As Object = Nothing, Optional Arg30 As Object = Nothing) As Object
-        If Macro Is Nothing Then Macro = Type.Missing
-        If Arg1 Is Nothing Then Arg1 = Type.Missing
-        If Arg2 Is Nothing Then Arg2 = Type.Missing
-        If Arg3 Is Nothing Then Arg3 = Type.Missing
-        If Arg4 Is Nothing Then Arg4 = Type.Missing
-        If Arg5 Is Nothing Then Arg5 = Type.Missing
-        If Arg6 Is Nothing Then Arg6 = Type.Missing
-        If Arg7 Is Nothing Then Arg7 = Type.Missing
-        If Arg8 Is Nothing Then Arg8 = Type.Missing
-        If Arg9 Is Nothing Then Arg9 = Type.Missing
-        If Arg10 Is Nothing Then Arg10 = Type.Missing
-        If Arg11 Is Nothing Then Arg11 = Type.Missing
-        If Arg12 Is Nothing Then Arg12 = Type.Missing
-        If Arg13 Is Nothing Then Arg13 = Type.Missing
-        If Arg14 Is Nothing Then Arg14 = Type.Missing
-        If Arg15 Is Nothing Then Arg15 = Type.Missing
-        If Arg16 Is Nothing Then Arg16 = Type.Missing
-        If Arg17 Is Nothing Then Arg17 = Type.Missing
-        If Arg18 Is Nothing Then Arg18 = Type.Missing
-        If Arg19 Is Nothing Then Arg19 = Type.Missing
-        If Arg20 Is Nothing Then Arg20 = Type.Missing
-        If Arg21 Is Nothing Then Arg21 = Type.Missing
-        If Arg22 Is Nothing Then Arg22 = Type.Missing
-        If Arg23 Is Nothing Then Arg23 = Type.Missing
-        If Arg24 Is Nothing Then Arg24 = Type.Missing
-        If Arg25 Is Nothing Then Arg25 = Type.Missing
-        If Arg26 Is Nothing Then Arg26 = Type.Missing
-        If Arg27 Is Nothing Then Arg27 = Type.Missing
-        If Arg28 Is Nothing Then Arg28 = Type.Missing
-        If Arg29 Is Nothing Then Arg29 = Type.Missing
-        If Arg30 Is Nothing Then Arg30 = Type.Missing
+        If Macro Is Nothing Then Macro = Missing.Value
+        If Arg1 Is Nothing Then Arg1 = Missing.Value
+        If Arg2 Is Nothing Then Arg2 = Missing.Value
+        If Arg3 Is Nothing Then Arg3 = Missing.Value
+        If Arg4 Is Nothing Then Arg4 = Missing.Value
+        If Arg5 Is Nothing Then Arg5 = Missing.Value
+        If Arg6 Is Nothing Then Arg6 = Missing.Value
+        If Arg7 Is Nothing Then Arg7 = Missing.Value
+        If Arg8 Is Nothing Then Arg8 = Missing.Value
+        If Arg9 Is Nothing Then Arg9 = Missing.Value
+        If Arg10 Is Nothing Then Arg10 = Missing.Value
+        If Arg11 Is Nothing Then Arg11 = Missing.Value
+        If Arg12 Is Nothing Then Arg12 = Missing.Value
+        If Arg13 Is Nothing Then Arg13 = Missing.Value
+        If Arg14 Is Nothing Then Arg14 = Missing.Value
+        If Arg15 Is Nothing Then Arg15 = Missing.Value
+        If Arg16 Is Nothing Then Arg16 = Missing.Value
+        If Arg17 Is Nothing Then Arg17 = Missing.Value
+        If Arg18 Is Nothing Then Arg18 = Missing.Value
+        If Arg19 Is Nothing Then Arg19 = Missing.Value
+        If Arg20 Is Nothing Then Arg20 = Missing.Value
+        If Arg21 Is Nothing Then Arg21 = Missing.Value
+        If Arg22 Is Nothing Then Arg22 = Missing.Value
+        If Arg23 Is Nothing Then Arg23 = Missing.Value
+        If Arg24 Is Nothing Then Arg24 = Missing.Value
+        If Arg25 Is Nothing Then Arg25 = Missing.Value
+        If Arg26 Is Nothing Then Arg26 = Missing.Value
+        If Arg27 Is Nothing Then Arg27 = Missing.Value
+        If Arg28 Is Nothing Then Arg28 = Missing.Value
+        If Arg29 Is Nothing Then Arg29 = Missing.Value
+        If Arg30 Is Nothing Then Arg30 = Missing.Value
         Return Application.Run(Macro, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30)
     End Function
 
@@ -255,103 +256,99 @@ Public MustInherit Class ExcelMacroTestBase
         Return Application.DDEInitiate(App, Topic)
     End Function
     Protected Function Union(Arg1 As Range, Arg2 As Range, Optional Arg3 As Object = Nothing, Optional Arg4 As Object = Nothing, Optional Arg5 As Object = Nothing, Optional Arg6 As Object = Nothing, Optional Arg7 As Object = Nothing, Optional Arg8 As Object = Nothing, Optional Arg9 As Object = Nothing, Optional Arg10 As Object = Nothing, Optional Arg11 As Object = Nothing, Optional Arg12 As Object = Nothing, Optional Arg13 As Object = Nothing, Optional Arg14 As Object = Nothing, Optional Arg15 As Object = Nothing, Optional Arg16 As Object = Nothing, Optional Arg17 As Object = Nothing, Optional Arg18 As Object = Nothing, Optional Arg19 As Object = Nothing, Optional Arg20 As Object = Nothing, Optional Arg21 As Object = Nothing, Optional Arg22 As Object = Nothing, Optional Arg23 As Object = Nothing, Optional Arg24 As Object = Nothing, Optional Arg25 As Object = Nothing, Optional Arg26 As Object = Nothing, Optional Arg27 As Object = Nothing, Optional Arg28 As Object = Nothing, Optional Arg29 As Object = Nothing, Optional Arg30 As Object = Nothing) As Range
-        If Arg1 Is Nothing Then Arg1 = Type.Missing
-        If Arg2 Is Nothing Then Arg2 = Type.Missing
-        If Arg3 Is Nothing Then Arg3 = Type.Missing
-        If Arg4 Is Nothing Then Arg4 = Type.Missing
-        If Arg5 Is Nothing Then Arg5 = Type.Missing
-        If Arg6 Is Nothing Then Arg6 = Type.Missing
-        If Arg7 Is Nothing Then Arg7 = Type.Missing
-        If Arg8 Is Nothing Then Arg8 = Type.Missing
-        If Arg9 Is Nothing Then Arg9 = Type.Missing
-        If Arg10 Is Nothing Then Arg10 = Type.Missing
-        If Arg11 Is Nothing Then Arg11 = Type.Missing
-        If Arg12 Is Nothing Then Arg12 = Type.Missing
-        If Arg13 Is Nothing Then Arg13 = Type.Missing
-        If Arg14 Is Nothing Then Arg14 = Type.Missing
-        If Arg15 Is Nothing Then Arg15 = Type.Missing
-        If Arg16 Is Nothing Then Arg16 = Type.Missing
-        If Arg17 Is Nothing Then Arg17 = Type.Missing
-        If Arg18 Is Nothing Then Arg18 = Type.Missing
-        If Arg19 Is Nothing Then Arg19 = Type.Missing
-        If Arg20 Is Nothing Then Arg20 = Type.Missing
-        If Arg21 Is Nothing Then Arg21 = Type.Missing
-        If Arg22 Is Nothing Then Arg22 = Type.Missing
-        If Arg23 Is Nothing Then Arg23 = Type.Missing
-        If Arg24 Is Nothing Then Arg24 = Type.Missing
-        If Arg25 Is Nothing Then Arg25 = Type.Missing
-        If Arg26 Is Nothing Then Arg26 = Type.Missing
-        If Arg27 Is Nothing Then Arg27 = Type.Missing
-        If Arg28 Is Nothing Then Arg28 = Type.Missing
-        If Arg29 Is Nothing Then Arg29 = Type.Missing
-        If Arg30 Is Nothing Then Arg30 = Type.Missing
+        If Arg3 Is Nothing Then Arg3 = Missing.Value
+        If Arg4 Is Nothing Then Arg4 = Missing.Value
+        If Arg5 Is Nothing Then Arg5 = Missing.Value
+        If Arg6 Is Nothing Then Arg6 = Missing.Value
+        If Arg7 Is Nothing Then Arg7 = Missing.Value
+        If Arg8 Is Nothing Then Arg8 = Missing.Value
+        If Arg9 Is Nothing Then Arg9 = Missing.Value
+        If Arg10 Is Nothing Then Arg10 = Missing.Value
+        If Arg11 Is Nothing Then Arg11 = Missing.Value
+        If Arg12 Is Nothing Then Arg12 = Missing.Value
+        If Arg13 Is Nothing Then Arg13 = Missing.Value
+        If Arg14 Is Nothing Then Arg14 = Missing.Value
+        If Arg15 Is Nothing Then Arg15 = Missing.Value
+        If Arg16 Is Nothing Then Arg16 = Missing.Value
+        If Arg17 Is Nothing Then Arg17 = Missing.Value
+        If Arg18 Is Nothing Then Arg18 = Missing.Value
+        If Arg19 Is Nothing Then Arg19 = Missing.Value
+        If Arg20 Is Nothing Then Arg20 = Missing.Value
+        If Arg21 Is Nothing Then Arg21 = Missing.Value
+        If Arg22 Is Nothing Then Arg22 = Missing.Value
+        If Arg23 Is Nothing Then Arg23 = Missing.Value
+        If Arg24 Is Nothing Then Arg24 = Missing.Value
+        If Arg25 Is Nothing Then Arg25 = Missing.Value
+        If Arg26 Is Nothing Then Arg26 = Missing.Value
+        If Arg27 Is Nothing Then Arg27 = Missing.Value
+        If Arg28 Is Nothing Then Arg28 = Missing.Value
+        If Arg29 Is Nothing Then Arg29 = Missing.Value
+        If Arg30 Is Nothing Then Arg30 = Missing.Value
         Return Application.Union(Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30)
     End Function
     Protected Function Intersect(Arg1 As Range, Arg2 As Range, Optional Arg3 As Object = Nothing, Optional Arg4 As Object = Nothing, Optional Arg5 As Object = Nothing, Optional Arg6 As Object = Nothing, Optional Arg7 As Object = Nothing, Optional Arg8 As Object = Nothing, Optional Arg9 As Object = Nothing, Optional Arg10 As Object = Nothing, Optional Arg11 As Object = Nothing, Optional Arg12 As Object = Nothing, Optional Arg13 As Object = Nothing, Optional Arg14 As Object = Nothing, Optional Arg15 As Object = Nothing, Optional Arg16 As Object = Nothing, Optional Arg17 As Object = Nothing, Optional Arg18 As Object = Nothing, Optional Arg19 As Object = Nothing, Optional Arg20 As Object = Nothing, Optional Arg21 As Object = Nothing, Optional Arg22 As Object = Nothing, Optional Arg23 As Object = Nothing, Optional Arg24 As Object = Nothing, Optional Arg25 As Object = Nothing, Optional Arg26 As Object = Nothing, Optional Arg27 As Object = Nothing, Optional Arg28 As Object = Nothing, Optional Arg29 As Object = Nothing, Optional Arg30 As Object = Nothing) As Range
-        If Arg1 Is Nothing Then Arg1 = Type.Missing
-        If Arg2 Is Nothing Then Arg2 = Type.Missing
-        If Arg3 Is Nothing Then Arg3 = Type.Missing
-        If Arg4 Is Nothing Then Arg4 = Type.Missing
-        If Arg5 Is Nothing Then Arg5 = Type.Missing
-        If Arg6 Is Nothing Then Arg6 = Type.Missing
-        If Arg7 Is Nothing Then Arg7 = Type.Missing
-        If Arg8 Is Nothing Then Arg8 = Type.Missing
-        If Arg9 Is Nothing Then Arg9 = Type.Missing
-        If Arg10 Is Nothing Then Arg10 = Type.Missing
-        If Arg11 Is Nothing Then Arg11 = Type.Missing
-        If Arg12 Is Nothing Then Arg12 = Type.Missing
-        If Arg13 Is Nothing Then Arg13 = Type.Missing
-        If Arg14 Is Nothing Then Arg14 = Type.Missing
-        If Arg15 Is Nothing Then Arg15 = Type.Missing
-        If Arg16 Is Nothing Then Arg16 = Type.Missing
-        If Arg17 Is Nothing Then Arg17 = Type.Missing
-        If Arg18 Is Nothing Then Arg18 = Type.Missing
-        If Arg19 Is Nothing Then Arg19 = Type.Missing
-        If Arg20 Is Nothing Then Arg20 = Type.Missing
-        If Arg21 Is Nothing Then Arg21 = Type.Missing
-        If Arg22 Is Nothing Then Arg22 = Type.Missing
-        If Arg23 Is Nothing Then Arg23 = Type.Missing
-        If Arg24 Is Nothing Then Arg24 = Type.Missing
-        If Arg25 Is Nothing Then Arg25 = Type.Missing
-        If Arg26 Is Nothing Then Arg26 = Type.Missing
-        If Arg27 Is Nothing Then Arg27 = Type.Missing
-        If Arg28 Is Nothing Then Arg28 = Type.Missing
-        If Arg29 Is Nothing Then Arg29 = Type.Missing
-        If Arg30 Is Nothing Then Arg30 = Type.Missing
+        If Arg3 Is Nothing Then Arg3 = Missing.Value
+        If Arg4 Is Nothing Then Arg4 = Missing.Value
+        If Arg5 Is Nothing Then Arg5 = Missing.Value
+        If Arg6 Is Nothing Then Arg6 = Missing.Value
+        If Arg7 Is Nothing Then Arg7 = Missing.Value
+        If Arg8 Is Nothing Then Arg8 = Missing.Value
+        If Arg9 Is Nothing Then Arg9 = Missing.Value
+        If Arg10 Is Nothing Then Arg10 = Missing.Value
+        If Arg11 Is Nothing Then Arg11 = Missing.Value
+        If Arg12 Is Nothing Then Arg12 = Missing.Value
+        If Arg13 Is Nothing Then Arg13 = Missing.Value
+        If Arg14 Is Nothing Then Arg14 = Missing.Value
+        If Arg15 Is Nothing Then Arg15 = Missing.Value
+        If Arg16 Is Nothing Then Arg16 = Missing.Value
+        If Arg17 Is Nothing Then Arg17 = Missing.Value
+        If Arg18 Is Nothing Then Arg18 = Missing.Value
+        If Arg19 Is Nothing Then Arg19 = Missing.Value
+        If Arg20 Is Nothing Then Arg20 = Missing.Value
+        If Arg21 Is Nothing Then Arg21 = Missing.Value
+        If Arg22 Is Nothing Then Arg22 = Missing.Value
+        If Arg23 Is Nothing Then Arg23 = Missing.Value
+        If Arg24 Is Nothing Then Arg24 = Missing.Value
+        If Arg25 Is Nothing Then Arg25 = Missing.Value
+        If Arg26 Is Nothing Then Arg26 = Missing.Value
+        If Arg27 Is Nothing Then Arg27 = Missing.Value
+        If Arg28 Is Nothing Then Arg28 = Missing.Value
+        If Arg29 Is Nothing Then Arg29 = Missing.Value
+        If Arg30 Is Nothing Then Arg30 = Missing.Value
         Return Application.Intersect(Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30)
     End Function
     Protected Function _Run2(Optional Macro As Object = Nothing, Optional Arg1 As Object = Nothing, Optional Arg2 As Object = Nothing, Optional Arg3 As Object = Nothing, Optional Arg4 As Object = Nothing, Optional Arg5 As Object = Nothing, Optional Arg6 As Object = Nothing, Optional Arg7 As Object = Nothing, Optional Arg8 As Object = Nothing, Optional Arg9 As Object = Nothing, Optional Arg10 As Object = Nothing, Optional Arg11 As Object = Nothing, Optional Arg12 As Object = Nothing, Optional Arg13 As Object = Nothing, Optional Arg14 As Object = Nothing, Optional Arg15 As Object = Nothing, Optional Arg16 As Object = Nothing, Optional Arg17 As Object = Nothing, Optional Arg18 As Object = Nothing, Optional Arg19 As Object = Nothing, Optional Arg20 As Object = Nothing, Optional Arg21 As Object = Nothing, Optional Arg22 As Object = Nothing, Optional Arg23 As Object = Nothing, Optional Arg24 As Object = Nothing, Optional Arg25 As Object = Nothing, Optional Arg26 As Object = Nothing, Optional Arg27 As Object = Nothing, Optional Arg28 As Object = Nothing, Optional Arg29 As Object = Nothing, Optional Arg30 As Object = Nothing) As Object
-        If Macro Is Nothing Then Macro = Type.Missing
-        If Arg1 Is Nothing Then Arg1 = Type.Missing
-        If Arg2 Is Nothing Then Arg2 = Type.Missing
-        If Arg3 Is Nothing Then Arg3 = Type.Missing
-        If Arg4 Is Nothing Then Arg4 = Type.Missing
-        If Arg5 Is Nothing Then Arg5 = Type.Missing
-        If Arg6 Is Nothing Then Arg6 = Type.Missing
-        If Arg7 Is Nothing Then Arg7 = Type.Missing
-        If Arg8 Is Nothing Then Arg8 = Type.Missing
-        If Arg9 Is Nothing Then Arg9 = Type.Missing
-        If Arg10 Is Nothing Then Arg10 = Type.Missing
-        If Arg11 Is Nothing Then Arg11 = Type.Missing
-        If Arg12 Is Nothing Then Arg12 = Type.Missing
-        If Arg13 Is Nothing Then Arg13 = Type.Missing
-        If Arg14 Is Nothing Then Arg14 = Type.Missing
-        If Arg15 Is Nothing Then Arg15 = Type.Missing
-        If Arg16 Is Nothing Then Arg16 = Type.Missing
-        If Arg17 Is Nothing Then Arg17 = Type.Missing
-        If Arg18 Is Nothing Then Arg18 = Type.Missing
-        If Arg19 Is Nothing Then Arg19 = Type.Missing
-        If Arg20 Is Nothing Then Arg20 = Type.Missing
-        If Arg21 Is Nothing Then Arg21 = Type.Missing
-        If Arg22 Is Nothing Then Arg22 = Type.Missing
-        If Arg23 Is Nothing Then Arg23 = Type.Missing
-        If Arg24 Is Nothing Then Arg24 = Type.Missing
-        If Arg25 Is Nothing Then Arg25 = Type.Missing
-        If Arg26 Is Nothing Then Arg26 = Type.Missing
-        If Arg27 Is Nothing Then Arg27 = Type.Missing
-        If Arg28 Is Nothing Then Arg28 = Type.Missing
-        If Arg29 Is Nothing Then Arg29 = Type.Missing
-        If Arg30 Is Nothing Then Arg30 = Type.Missing
+        If Macro Is Nothing Then Macro = Missing.Value
+        If Arg1 Is Nothing Then Arg1 = Missing.Value
+        If Arg2 Is Nothing Then Arg2 = Missing.Value
+        If Arg3 Is Nothing Then Arg3 = Missing.Value
+        If Arg4 Is Nothing Then Arg4 = Missing.Value
+        If Arg5 Is Nothing Then Arg5 = Missing.Value
+        If Arg6 Is Nothing Then Arg6 = Missing.Value
+        If Arg7 Is Nothing Then Arg7 = Missing.Value
+        If Arg8 Is Nothing Then Arg8 = Missing.Value
+        If Arg9 Is Nothing Then Arg9 = Missing.Value
+        If Arg10 Is Nothing Then Arg10 = Missing.Value
+        If Arg11 Is Nothing Then Arg11 = Missing.Value
+        If Arg12 Is Nothing Then Arg12 = Missing.Value
+        If Arg13 Is Nothing Then Arg13 = Missing.Value
+        If Arg14 Is Nothing Then Arg14 = Missing.Value
+        If Arg15 Is Nothing Then Arg15 = Missing.Value
+        If Arg16 Is Nothing Then Arg16 = Missing.Value
+        If Arg17 Is Nothing Then Arg17 = Missing.Value
+        If Arg18 Is Nothing Then Arg18 = Missing.Value
+        If Arg19 Is Nothing Then Arg19 = Missing.Value
+        If Arg20 Is Nothing Then Arg20 = Missing.Value
+        If Arg21 Is Nothing Then Arg21 = Missing.Value
+        If Arg22 Is Nothing Then Arg22 = Missing.Value
+        If Arg23 Is Nothing Then Arg23 = Missing.Value
+        If Arg24 Is Nothing Then Arg24 = Missing.Value
+        If Arg25 Is Nothing Then Arg25 = Missing.Value
+        If Arg26 Is Nothing Then Arg26 = Missing.Value
+        If Arg27 Is Nothing Then Arg27 = Missing.Value
+        If Arg28 Is Nothing Then Arg28 = Missing.Value
+        If Arg29 Is Nothing Then Arg29 = Missing.Value
+        If Arg30 Is Nothing Then Arg30 = Missing.Value
         Return Application._Run2(Macro, Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30)
     End Function
 
