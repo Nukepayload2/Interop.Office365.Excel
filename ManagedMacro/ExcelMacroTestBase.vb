@@ -1,4 +1,5 @@
-﻿Imports System.Reflection
+﻿Imports System.ComponentModel
+Imports System.Reflection
 Imports Microsoft.Office.Core
 Imports Microsoft.Office.Interop.Excel
 
@@ -208,6 +209,7 @@ Public MustInherit Class ExcelMacroTestBase
     Protected Function ExecuteExcel4Macro([String] As String) As Object
         Return Application.ExecuteExcel4Macro([String])
     End Function
+    <EditorBrowsable(EditorBrowsableState.Never)>
     Protected Function _Evaluate(Name As Object) As Object
         Return Application._Evaluate(Name)
     End Function
@@ -317,6 +319,7 @@ Public MustInherit Class ExcelMacroTestBase
         If Arg30 Is Nothing Then Arg30 = Missing.Value
         Return Application.Intersect(Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, Arg9, Arg10, Arg11, Arg12, Arg13, Arg14, Arg15, Arg16, Arg17, Arg18, Arg19, Arg20, Arg21, Arg22, Arg23, Arg24, Arg25, Arg26, Arg27, Arg28, Arg29, Arg30)
     End Function
+    <EditorBrowsable(EditorBrowsableState.Never)>
     Protected Function _Run2(Optional Macro As Object = Nothing, Optional Arg1 As Object = Nothing, Optional Arg2 As Object = Nothing, Optional Arg3 As Object = Nothing, Optional Arg4 As Object = Nothing, Optional Arg5 As Object = Nothing, Optional Arg6 As Object = Nothing, Optional Arg7 As Object = Nothing, Optional Arg8 As Object = Nothing, Optional Arg9 As Object = Nothing, Optional Arg10 As Object = Nothing, Optional Arg11 As Object = Nothing, Optional Arg12 As Object = Nothing, Optional Arg13 As Object = Nothing, Optional Arg14 As Object = Nothing, Optional Arg15 As Object = Nothing, Optional Arg16 As Object = Nothing, Optional Arg17 As Object = Nothing, Optional Arg18 As Object = Nothing, Optional Arg19 As Object = Nothing, Optional Arg20 As Object = Nothing, Optional Arg21 As Object = Nothing, Optional Arg22 As Object = Nothing, Optional Arg23 As Object = Nothing, Optional Arg24 As Object = Nothing, Optional Arg25 As Object = Nothing, Optional Arg26 As Object = Nothing, Optional Arg27 As Object = Nothing, Optional Arg28 As Object = Nothing, Optional Arg29 As Object = Nothing, Optional Arg30 As Object = Nothing) As Object
         If Macro Is Nothing Then Macro = Missing.Value
         If Arg1 Is Nothing Then Arg1 = Missing.Value
