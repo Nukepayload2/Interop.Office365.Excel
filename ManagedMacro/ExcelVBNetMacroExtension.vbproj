@@ -6,13 +6,11 @@
     <TargetFramework>net462</TargetFramework>
     <Deterministic>true</Deterministic>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>16.0.15028.20160</Version>
+    <Version>16.0.18526.20168</Version>
     <Description>Provides Office 365 Excel Interop assemblies.</Description>
-    <PackageReleaseNotes>Target Excel version: 2203 (March 2022)
-Added new worksheet functions, such as ARRAYTOTEXT.
-Migrated to .NET Framework 4.6.2 for security reason.
-Added `#BUSY!`</PackageReleaseNotes>
-    <PackageTags>excel, interop, office365, com</PackageTags>
+    <PackageReleaseNotes>Target Excel version: 2503 (March 2025)
+Added CellControl, PictureInCell and some settings properties.</PackageReleaseNotes>
+    <PackageTags>excel com interop office365</PackageTags>
     <RepositoryUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
@@ -20,7 +18,7 @@ Added `#BUSY!`</PackageReleaseNotes>
     <Company>Nukepayload2</Company>
     <Authors>Nukepayload2</Authors>
     <Product>Interop.Office365.Excel</Product>
-    <DocumentationFile>Nukepayload2.Interop.Office365.Excel.xml</DocumentationFile>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
   
   <ItemGroup>
