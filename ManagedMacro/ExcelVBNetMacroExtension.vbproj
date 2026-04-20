@@ -6,10 +6,11 @@
     <TargetFramework>net462</TargetFramework>
     <Deterministic>true</Deterministic>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>16.0.18526.20168</Version>
+    <Version>16.0.19929.20062</Version>
     <Description>Provides Office 365 Excel Interop assemblies.</Description>
-    <PackageReleaseNotes>Target Excel version: 2503 (March 2025)
-Added CellControl, PictureInCell and some settings properties.</PackageReleaseNotes>
+    <PackageReleaseNotes>
+Target Excel version: 2604 (April 2026)
+Added AutoRefresh,TogglePythonMarshalMode,DisplayDataTypeIcons and some enum members.</PackageReleaseNotes>
     <PackageTags>excel com interop office365</PackageTags>
     <RepositoryUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</RepositoryUrl>
     <PackageProjectUrl>https://github.com/Nukepayload2/Interop.Office365.Excel</PackageProjectUrl>
